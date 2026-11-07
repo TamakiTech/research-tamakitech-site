@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Does Salary Inequality Affect Team Success? — Tamaki Economic Research</title>
+    <meta name="description" content="David M. Forsyth studies whether pay gaps inside a Major League Baseball team affect winning, using a 1985–2016 team-year panel." />
+    <link rel="canonical" href="https://research.tamakitech.com/papers/mlb-salary-inequality/" />
+    <link rel="icon" href="/logo/tamaki-t.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img src="/logo/tamaki-t.png" alt="" />
+        <span>
+          <strong>Tamaki Economic Research</strong>
+          <small>Tamaki Technologies LLC</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/" aria-current="page">Papers</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main class="wrap paper" id="content">
+      <p class="kicker"><a href="/">Papers</a> · December 12, 2025</p>
+      <h1>Does Salary Inequality Affect Team Success? Evidence from Major League Baseball</h1>
+      <p class="byline"><a href="/about/">David M. Forsyth</a><br />Department of Economics, University of Missouri<br />Prepared for ECONOM 8473, Applied Econometrics, with Dr. Alyssa Carlson</p>
+      <p class="actions"><a class="download" href="/papers/mlb-salary-inequality/forsyth-2025-mlb-salary-inequality.pdf">Download PDF</a></p>
+
+      <h2>Question</h2>
+      <p>Some clubs pay a few stars most of the payroll. Others spread pay more evenly. This paper asks whether that gap, inside the team, changes winning percentage or the chance of a World Series title.</p>
+
+      <h2>Method</h2>
+      <p>The unit of observation is the team-year. The panel has 26 franchises and 32 seasons, 1985 through 2016, for 832 observations. Expansion clubs are left out so every year has the same teams. Franchise moves are aligned: the Montreal Expos with the Washington Nationals, and the California and Anaheim Angels with the Los Angeles Angels.</p>
+      <p>Salary dispersion is measured by the Gini coefficient. The Herfindahl–Hirschman Index is the robustness check. Outcomes are team winning percentage and an indicator for winning the World Series. Controls include the prior year’s winning percentage, the log of team payroll, manager career wins, league-wide dispersion, on-base percentage, runs scored per game, fielding percentage, runs allowed per game, the number of high-WAR players, and a league indicator.</p>
+      <p>The paper estimates pooled ordinary least squares, then standard errors clustered by team, a random-effects model, and a team fixed-effects model. A Hausman test rejects random effects (p = 0.0000), so the fixed-effects estimates are the ones used for interpretation. The data were cleaned in Stata. Variance inflation factors are reported. The mean VIF is 2.49.</p>
+      <p>A separate look at the 2025 season uses that year’s salaries and standings. It is not part of the regression sample.</p>
+
+      <h2>Data</h2>
+      <ul>
+        <li>Lahman Baseball Database, for batting, pitching, fielding, won-loss records, managers, and player salaries. Salary coverage in that file runs from 1985 through 2016, which sets the sample window.</li>
+        <li>Baseball Almanac, used to fill salary rows missing from Lahman. The 1987 Texas Rangers are one example: Lahman listed four players.</li>
+        <li>FanGraphs wins above replacement. A position player or starting pitcher at 4.0 WAR or above, and a relief pitcher at 2.0 or above, counts as a top player.</li>
+        <li>USA Today salaries and Baseball-Reference standings, for the 2025 figures only.</li>
+      </ul>
+      <p>On-base percentage was calculated in Stata from the raw counts. When a season had more than one manager, career wins are prorated by the share of games each manager worked.</p>
+
+      <h2>Result</h2>
+      <p>A simple regression shows a small negative link between the team Gini and winning percentage, about two-thirds of a win over a 162-game season for a 0.10 rise in the Gini, and it is not statistically significant. The link looks larger once payroll is included, and then disappears when offense, defense, manager wins, and high-WAR players are added.</p>
+      <p>In the preferred team fixed-effects model, the Gini coefficient on winning percentage is about zero and is not statistically significant. The same is true for winning the World Series, and for the models that replace the Gini with the Herfindahl–Hirschman Index. The paper reads that as limited explanatory power for intra-team salary inequality, in line with Tao, Chuang, and Lin (2016), and against the stronger negative result in Breunig, Garrett-Rumba, Jardin, and Rocaboy (2013), who controlled only for average team salary.</p>
+      <p>Runs scored, runs allowed, and the number of top players are the controls that track winning. A 2025 snapshot points the same way: the Dodgers and Blue Jays sat near the middle of the league on salary inequality, while the Brewers won the most games on a low payroll.</p>
+
+      <p class="cite">Suggested citation
+        <span>Forsyth, David M. (2025). Does salary inequality affect team success? Evidence from Major League Baseball. Graduate research paper, Department of Economics, University of Missouri. https://research.tamakitech.com/papers/mlb-salary-inequality/</span>
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>An independent research initiative of Tamaki Technologies LLC.</p>
+        <p class="footer-links"><a href="https://tamakitech.com/">Tamaki Technologies LLC</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:support@tamakitech.com">support@tamakitech.com</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

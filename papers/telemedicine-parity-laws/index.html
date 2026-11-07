@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Does Telemedicine Save Lives? — Tamaki Economic Research</title>
+    <meta name="description" content="David M. Forsyth replicates and extends Chen and Dills (2024) on state telemedicine parity laws and county mortality from 1999 to 2016." />
+    <link rel="canonical" href="https://research.tamakitech.com/papers/telemedicine-parity-laws/" />
+    <link rel="icon" href="/logo/tamaki-t.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img src="/logo/tamaki-t.png" alt="" />
+        <span>
+          <strong>Tamaki Economic Research</strong>
+          <small>Tamaki Technologies LLC</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/" aria-current="page">Papers</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main class="wrap paper" id="content">
+      <p class="kicker"><a href="/">Papers</a> · December 1, 2025</p>
+      <h1>Does Telemedicine Save Lives? Evidence on the Effect of Telemedicine Parity Laws on Mortality Rates</h1>
+      <p class="byline"><a href="/about/">David M. Forsyth</a><br />Department of Economics, University of Missouri<br />Prepared for ECONOM 8413, Research Workshop I, with Dr. Vitor Trindade<br />A replication and extension of Chen and Dills, <cite>Southern Economic Journal</cite> 91(1): 12–37 (July 2024). <a href="https://doi.org/10.1002/soej.12562">doi:10.1002/soej.12562</a></p>
+      <p class="actions"><a class="download" href="/papers/telemedicine-parity-laws/forsyth-2025-telemedicine-parity-laws.pdf">Download PDF</a></p>
+
+      <h2>Question</h2>
+      <p>Telemedicine parity laws require private insurers, and in some states Medicaid, to cover a telemedicine visit to the same extent as an in-person visit. This paper asks whether those laws change county mortality, and whether the Chen and Dills (2024) estimates hold when the data and the Stata code are rebuilt from the cited sources.</p>
+      <p>The original paper did not include a replication package. Mortality and covariate files were downloaded again, and the code was written independently.</p>
+
+      <h2>Method</h2>
+      <p>The design is difference-in-differences at the county-year level, from 1999 through 2016. The outcome is the log of a cause-specific mortality rate. The treatment indicator turns on when a state has a private telemedicine parity law in force. The regression includes county fixed effects, year fixed effects, and time-varying county and state covariates. Standard errors are clustered by state.</p>
+      <p>A state is treated in the main sample only if the law leaves at least four years before adoption and three years after. That rule selects 14 states. A second sample adds never-treated states and lets year effects differ for treated and never-treated counties. Event studies, centered on the adoption year, check the path of mortality before and after the law. Indicators three or more years from adoption are pooled at each end.</p>
+      <p>Further checks cover ages 35 to 64, state-specific linear trends, falsification outcomes, six urban–rural county groups, and hospital use. The extension adds malignant neoplasm and chronic lower respiratory disease, which the original paper did not estimate.</p>
+
+      <h2>Data</h2>
+      <ul>
+        <li>CDC WONDER, for county mortality and for the 2013 National Center for Health Statistics urban–rural county codes. The mortality sample keeps county-years with at least 10 deaths from all causes.</li>
+        <li>Bureau of Labor Statistics Local Area Unemployment Statistics, annual county unemployment files, 1999–2016.</li>
+        <li>Census Bureau Small Area Income and Poverty Estimates, for median household income and the poverty rate.</li>
+        <li>Area Health Resources Files, for population density and provider supply. The missing year 2008 is linearly interpolated, as in the original paper.</li>
+        <li>Kaiser Family Foundation, for the status of each state’s ACA Medicaid expansion.</li>
+        <li>Current Population Survey, including IPUMS, for the percent of the population on Medicaid and on Medicare.</li>
+        <li>Decennial Census (2000 and 2010) for percent Black and percent white, and the American Community Survey five-year files (2006–2010 and 2011–2015) for percent female, percent with a bachelor’s degree, and percent with a high school education or less.</li>
+        <li>American Hospital Association Annual Survey, for admissions, emergency visits, inpatient days, and outpatient visits per 1,000 population.</li>
+        <li>Council for Affordable Health Insurance, for 2006 indexes of state benefit mandates and provider regulations.</li>
+      </ul>
+      <p>The never-treated sample has 21 states, 1,255 counties, and 22,590 observations. The selected treated sample has 14 states, 779 counties, and 14,022 observations. All-cause and cause-specific means were checked against the tables in Chen and Dills (2024).</p>
+
+      <h2>Result</h2>
+      <p>In the sample that combines treated and never-treated states, a parity law is associated with mortality 5.7 percent lower for ischemic heart disease, 3.9 percent lower for diabetes, and 3.4 percent lower for suicide. Ischemic heart disease is significant at the 1 percent level. Diabetes and suicide are significant at the 10 percent level. Cerebrovascular disease and influenza and pneumonia are not significant. In the treated-states-only sample, ischemic heart disease is 5.4 percent lower and diabetes is 3.2 percent lower. Suicide is negative and not significant in that sample.</p>
+      <p>The largest declines for ischemic heart disease, diabetes, and suicide show up in counties on the fringe of large metropolitan areas. Hospital admissions and emergency visits are also lower after adoption. In the extension, chronic lower respiratory disease is 2.7 percent lower in the combined sample and significant at the 5 percent level. Cancer is negative and not significant in either sample.</p>
+      <p>The signs and the pattern of significance line up with Chen and Dills. The coefficients are not exact matches. All-cause mortality in this replication is positive and not significant, which is the opposite sign from the original paper. The author traces that gap to differences in how the estimates were computed.</p>
+
+      <p class="cite">Suggested citation
+        <span>Forsyth, David M. (2025). Does telemedicine save lives? Evidence on the effect of telemedicine parity laws on mortality rates: A replication and extension of Chen and Dills (July 2024). Graduate research paper, Department of Economics, University of Missouri. https://research.tamakitech.com/papers/telemedicine-parity-laws/</span>
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>An independent research initiative of Tamaki Technologies LLC.</p>
+        <p class="footer-links"><a href="https://tamakitech.com/">Tamaki Technologies LLC</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:support@tamakitech.com">support@tamakitech.com</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
