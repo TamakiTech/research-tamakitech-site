@@ -291,6 +291,13 @@ h1 {
 .chart-grid { stroke: var(--line); stroke-width: 1; }
 .chart-income { fill: none; stroke: #0e4c81; stroke-width: 2.25; }
 .chart-cost { fill: none; stroke: #8a3d22; stroke-width: 2.25; stroke-dasharray: 5 4; }
+.flow-income { fill: none; stroke: #0e4c81; stroke-width: 2.25; }
+.flow-cost { fill: none; stroke: #8a3d22; stroke-width: 2.25; }
+.flow-reserve { fill: none; stroke: #245c45; stroke-width: 2.25; }
+.flow-proj { stroke-dasharray: 4 3.5; }
+.flow-shade { fill: rgba(28, 25, 22, 0.05); }
+.flow-rule { stroke: rgba(28, 25, 22, 0.45); stroke-width: 1; stroke-dasharray: 2 3; }
+.flow-zero { stroke: var(--ink); stroke-width: 1; }
 
 .legend {
   display: flex;
@@ -310,6 +317,19 @@ h1 {
 .swatch.cost {
   border-top-color: #8a3d22;
   border-top-style: dashed;
+}
+
+.swatch.cost-solid {
+  border-top-color: #8a3d22;
+  border-top-style: solid;
+}
+
+.swatch.reserve { border-top-color: #245c45; }
+
+.series tr.proj-label th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .source, .chart p { color: var(--muted); }
