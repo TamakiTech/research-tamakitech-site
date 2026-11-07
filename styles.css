@@ -281,6 +281,70 @@ h1 {
 .footer-links a:hover,
 .footer-links a:focus-visible { color: var(--link); }
 
+.chart svg {
+  width: 100%;
+  height: auto;
+  color: var(--ink);
+}
+
+.chart-axis { stroke: var(--line); stroke-width: 1; }
+.chart-grid { stroke: var(--line); stroke-width: 1; }
+.chart-income { fill: none; stroke: #0e4c81; stroke-width: 2.25; }
+.chart-cost { fill: none; stroke: #8a3d22; stroke-width: 2.25; stroke-dasharray: 5 4; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+
+.legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+
+.swatch {
+  width: 1.5rem;
+  border-top: 3px solid #0e4c81;
+}
+
+.swatch.cost {
+  border-top-color: #8a3d22;
+  border-top-style: dashed;
+}
+
+.source, .chart p { color: var(--muted); }
+
+.figures { margin-top: 1.25rem; }
+
+.figures summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.series {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+
+.series th,
+.series td {
+  padding: 0.28rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+
+.series thead th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.series th[scope="row"],
+.series thead th:first-child { text-align: left; }
+
 @media (max-width: 640px) {
   .site-header {
     align-items: flex-start;
