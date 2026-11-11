@@ -330,11 +330,11 @@ h1 {
 .swatch.pol { border-top-color: #6b2d5b; }
 
 .ueno-assets { fill: none; stroke: #1c1916; stroke-width: 2.25; }
-.ueno-deposits { fill: none; stroke: #0e4c81; stroke-width: 2.25; }
-.ueno-loans { fill: none; stroke: #245c45; stroke-width: 2.25; }
+.ueno-deposits { fill: none; stroke: #1d4ed8; stroke-width: 2.25; }
+.ueno-loans { fill: none; stroke: #be185d; stroke-width: 2.25; }
 .ueno-dot-assets { fill: #1c1916; }
-.ueno-dot-deposits { fill: #0e4c81; }
-.ueno-dot-loans { fill: #245c45; }
+.ueno-dot-deposits { fill: #1d4ed8; }
+.ueno-dot-loans { fill: #be185d; }
 .pin-gov { stroke: #a16207; stroke-width: 1.25; }
 .pin-corp { stroke: #8a3d22; stroke-width: 1.25; }
 .pin-merger { stroke: #8a3d22; stroke-width: 2.5; }
